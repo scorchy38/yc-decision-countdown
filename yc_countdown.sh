@@ -31,7 +31,7 @@ countdown() {
         sleep 1
     done
 
-    echo "\nTime's up!"
+    echo "$(figlet -w $WIDTH -f standard 'See you in SF!')"
 }
 
 SECONDS_LEFT=$((TARGET_DATE_EPOCH - $(date +%s)))
