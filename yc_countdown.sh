@@ -6,7 +6,6 @@ TARGET_DATE_EPOCH=$(date -j -f "%Y-%m-%d %H:%M:%S" "$TARGET_DATE" +"%s")
 print_header() {
     clear
     WIDTH=$(tput cols)
-    echo "\n\n\n\n"
     echo "$(figlet -w $WIDTH -f standard 'YC')"
     echo "$(figlet -w $WIDTH -f standard 'Decision Deadline S24')"
     echo "###################################################################################################"
@@ -27,7 +26,7 @@ countdown() {
         clear
         print_header
         WIDTH=$(tput cols)
-        echo "\n$(figlet -w $WIDTH -f standard "$COUNTDOWN_TEXT")"
+        echo "$(figlet -w $WIDTH -f standard "$COUNTDOWN_TEXT")"
         sleep 1
     done
 
